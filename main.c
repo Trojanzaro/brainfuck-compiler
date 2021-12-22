@@ -28,7 +28,7 @@ int main(int argc, char **argv)
             case '[':
                 return_counter = i;       // this....[...
             case ']':
-                if (*pointer != 0) i = return_counter; else return_counter = 0; // ....]... and this were the only complicated parts in the whole project, took me like... 3 minutes to implement
+                (*pointer != 0) ? i = return_counter : return_counter = 0; // ....]... and this were the only complicated parts in the whole project, took me like... 3 minutes to implement
                 break;
             case '.':
                 putc(*pointer, stdout);
